@@ -12,3 +12,5 @@ To run test cases -
 ```bash
 npm test
 ```
+
+Postman collection file has all the api calls - heady.postman_collection.json
