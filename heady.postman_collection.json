@@ -1,0 +1,128 @@
+{
+	"variables": [],
+	"info": {
+		"name": "heady",
+		"_postman_id": "a0a0cc6b-e93e-b38a-158f-2a1017d058f5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addcategory",
+			"request": {
+				"url": "http://localhost:4000/api/v1/category/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "fm",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "parent",
+							"value": "mobile",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getcategory",
+			"request": {
+				"url": "http://localhost:4000/api/v1/category/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeCategoryById",
+			"request": {
+				"url": "http://localhost:4000/api/v1/category/removeCategoryById/5ee636fd5f01b80fb4e73bea",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"url": "http://localhost:4000/api/v1/product/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\" : \"Apple iPhone X\",\n\t\"categories\" : [\"mobile\",\"mobile/64gb\",\"mobile/grey\",\"mobile/20mp\"],\n\t\"quantity\" : 110,\n\t\"price\" : \"44000\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getproduct",
+			"request": {
+				"url": "http://localhost:4000/api/v1/product",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"url": "http://localhost:4000/api/v1/product/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"_id\": \"5ee6278ae64dca4b446217de\",\n        \"quantity\": 7,\n        \"price\": \"49000\",\n        \"categories\": [\n            \"mobile\",\n            \"mobile/16gb\",\n            \"mobile/red\"\n        ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeProductById",
+			"request": {
+				"url": "http://localhost:4000/api/v1/product/removeProductById/5ee636fd5f01b80fb4e73bea",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
